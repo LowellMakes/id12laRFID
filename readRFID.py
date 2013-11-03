@@ -16,6 +16,8 @@ def RFIDread():
     return id[1:]
 
 def validateUser(id='',room=''):
+    datetimenow=time.strftime("%Y-%m-%d %H:%M:%S",time.gmtime())
+    logfile=open('userlog.txt','a')
     with open('userlist.csv','rb') as file:
         reader = csv.reader(file)
         csv_reader = csv.DictReader(file)
@@ -23,9 +25,13 @@ def validateUser(id='',room=''):
             if id in row['id']:
                 if 'yes' in row[room]:
                 #    print 'yes'
+                    logfile.write(datetimenow+'User:'+str(row['name'])+' Entered')
+                    logfile.close()
                     return 1
                 else:
                 #    print 'No'
+                    logfile.write(datetimenow+'User:'+str(row['name'])+' Access Denied')
+                    logfile.close()
                     return 0
                 
 
