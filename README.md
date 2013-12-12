@@ -3,6 +3,8 @@ id12laRFID
 
 Function: RFID entry/machine use system for Makerspaces
 
+### i did all this 4hrs :) so please...
+
 ##Usage:
     readRFID.py -f & (run as background process)
     readRFID.py -r <room1> (check acces to room /print Card ID)
