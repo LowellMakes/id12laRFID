@@ -11,7 +11,7 @@ Function: RFID entry/machine use system for Makerspaces
 the user log is saved in the same folder "userlog.txt"
 
     Hardware Connection:
-    SFE RFID bread out        Raspberry Pi(Rev2/1)
+    SFE RFID break out        Raspberry Pi(Rev2/1)
     VCC           --------->  P1
     GND           --------->  P6
     TXD           --------->  P8 (GPIO 14)
